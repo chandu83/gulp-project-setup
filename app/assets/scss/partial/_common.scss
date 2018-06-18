@@ -1,0 +1,251 @@
+.home-header {
+    margin-top: 18px;
+    .logo {
+        img {
+            max-width: 150px;
+        }
+    }
+    .online-cart {
+        background: $red-color url($top-cart-img-url) no-repeat 90% center;
+        @include block-padding (8px 10px);
+        @include border-radius (10px);
+        color:$white-color;
+        @include text-transform (uppercase);
+        @include body-text('Proxima Nova regular',$body-text-size);
+        display: block;
+        text-align: left;
+        @include text-decoration(none);
+        @include transition(all 0.5s ease);
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .search-main {
+        .col {
+            @include block-padding (0px 5px);
+        }
+        .search-icon {
+            background: url($search-icons-url) no-repeat right center;
+            @include border-radius(0.85rem);
+            @include block-padding(0.175rem 0.75rem);
+            @include block-border(1px,1px,1px,1px,$link-light-grey-color,solid);
+            @include background-position(95%, 50%);
+        }
+    }
+    .navigation-main {
+        nav {
+            @include block-padding(0);
+            .navbar-collapse {
+                justify-content:flex-end;
+                .navbar-nav {
+                    .nav-item {
+                        @include body-text('Proxima Nova regular',$body-text-size);
+                        @include text-transform(uppercase);
+                        color:$link-color;
+                        &.active {
+                            .nav-link {
+                                background: $red-color;
+                                color:$white-color;
+                            }
+                            
+                        }
+                        .nav-link {
+                            &:hover {
+                                background: $red-color;
+                                color: $white-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .navbar-brand {
+        display: none;
+        @media (max-width:768px) {
+            display: block;
+            
+        }
+    }
+}
+.social-icon {
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    margin-left: 5px;
+    background: url($social-icons-img-url) no-repeat;
+    &.facebook-social {
+        @include background-position(0,0);
+        @include transition(all 0.5s ease);
+        &:hover {
+            @include background-position(0,-41px);
+        }
+    }
+    &.twitter-social {
+        @include background-position(-38px,0);
+        @include transition(all 0.5s ease);
+        &:hover {
+            @include background-position(-38px,-41px);
+        }
+    }
+    &.google-social {
+        @include background-position(-76px,0);
+        @include transition(all 0.5s ease);
+        &:hover {
+            @include background-position(-76px,-41px);
+        }
+    }
+}
+footer.main-footer {
+    @include body-text('Proxima Nova regular',$footer-text-size);
+    .footer-top {
+        @include block-margin(20px auto);
+        header {
+            @include body-text('Proxima Nova regular',$quick-link-head-size);
+            color:$sub-heading-color;
+            min-height: 45px;
+        }
+        section {
+            ul {
+                @extend %list-style;
+                li {
+                    a {
+                        @include body-text('Proxima Nova regular',$quick-link-size);
+                        color:$sub-heading-color;
+                        @include text-decoration(none);
+                        span {
+                            background: url($footer-link-img-url) no-repeat top left;
+                            @include background-position(0,0);
+                            width: 6px;
+                            height: 13px;
+                            display: inline-block;
+                            @include block-padding(0 10px 0 0);
+                        }
+                        &:hover {
+                            color:$red-color;
+                            span {
+                                @include background-position(0,-13px);
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .subscribe-block {
+            @include block-padding(0);
+            h5 {
+                @include body-text('Proxima Nova regular',$quick-link-size);
+                color:$footer-bg-color;
+            }
+            .form-group {
+                @include block-margin(1rem 0 0 0);
+                .subscribe-fields {
+                   position: relative;
+                    .subscribe-textbox {
+                        font-size: $more-link-size;
+                        color:$footer-bg-color;
+                        @include border-radius(0.85rem);
+                        @include block-padding(0.175rem 0.75rem);
+                        @include block-border(2px,2px,2px,2px,$link-light-grey-color,solid);
+                    }
+                    .subscribe-btn {
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        background: $red-color;
+                        @include body-text('Proxima Nova regular',$subscribe-btn-size);
+                        color: $white-color;
+                        @include border-radius(0.65rem);
+                        @include block-padding(0.175rem 0.65rem);
+                        @include block-border(0,0,0,0,$link-light-grey-color,solid);
+                        cursor: pointer;
+                        outline: 0;
+                    } 
+                }
+                
+            }
+        }
+        .store-locator {
+            background: url($store-locator-img-url) no-repeat center top;
+            @include block-padding(40px);
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            @include transition(all 0.5s ease);
+            &:after {
+                content: "Store Locator";
+                position: absolute;
+                bottom: 0;
+                @include body-text('Proxima Nova semibold',$more-link-size);
+                color: $footer-bg-color;
+                text-align: center;
+                width: 100%;
+                left: 0;
+            }
+            &:hover {
+                &:after {
+                    color: $red-color;
+                }
+            }
+        }
+        .online-store {
+            background: url($online-store-img-url) no-repeat center top;
+            @include block-padding(40px);
+            display: inline-block;
+            position: relative;
+            width: 100%;
+            @include transition(all 0.5s ease);
+            &:after {
+                content: "Online Store";
+                position: absolute;
+                bottom: 0;
+                @include body-text('Proxima Nova semibold',$more-link-size);
+                color: $footer-bg-color;
+                text-align: center;
+                width: 100%;
+                left: 0;
+            }
+            &:hover {
+                &:after {
+                    color: $red-color;
+                }
+            }
+        }
+        .footer-social {
+            @include block-padding(2% 0 0 0);
+        }
+    }
+    .footer-bottom {
+      background: $footer-bg-color; 
+      color:$white-color;
+        > .row {
+            > div {
+                @include block-padding(10px 0);
+                text-align: center;
+            }
+        }
+        a {
+            color: $white-color;
+            @include text-decoration(none);
+            @include transition(all 0.5s ease);
+            &:hover {
+                color:$red-color;
+            }
+        }
+        ul {
+            @extend %list-style;
+            li {
+                display: inline;
+                @include block-border(0,0,0,1px,$white-color,solid);
+                &:first-child {
+                    @include block-border(0,0,0,0,$white-color,solid);
+                }
+                a {
+                    @include block-padding(0 5px);
+                }
+            }
+        }
+    }
+    
+}

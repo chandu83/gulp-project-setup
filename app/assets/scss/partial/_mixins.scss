@@ -1,0 +1,38 @@
+@mixin body-text($fonttype,$fontsize) {
+    font-family: $fonttype, Open Sans , sans-serif ;
+    font-size: $fontsize;
+}
+@mixin block-border($btop,$bright,$bbottom,$bleft,$bcolor,$bstyle) {
+    border-style: $bstyle;
+    border-color: $bcolor;
+    border-width: $btop $bright $bbottom $bleft;
+}
+@mixin block-padding($value) {
+    padding: $value;
+}
+
+@mixin block-margin($value) {
+    margin: $value;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -ms-border-radius:$radius;
+    border-radius: $radius;
+}
+@mixin text-transform($value) {
+    text-transform: $value;
+}
+@mixin text-decoration($value) {
+    text-decoration: $value;
+}
+@mixin transition($value) {
+    -webkit-transition:$value;
+    -moz-transition:$value;
+    -mz-transition:$value;
+    transition: $value;
+}
+@mixin background-position($left-value, $top-value) {
+    background-position: $left-value $top-value;
+}

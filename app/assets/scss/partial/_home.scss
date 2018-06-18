@@ -1,0 +1,246 @@
+main {
+    &.container-fluid {
+        @include block-padding(0);
+    }
+    .banner {
+        background: url($homepage-banner-url) no-repeat center center;
+        width: 100%;
+        max-height: 800px;
+        position: relative;
+        @include block-padding(15%);
+        .banner-content {
+            max-width: 780px;
+            color: $white-color;
+            @include block-margin(auto);
+            h1 {
+                @include body-text('Proxima Nova scosf thin',$banner-heading-size);
+                @include text-transform(uppercase);
+                line-height: 0.9;
+                span {
+                    @include body-text('Proxima Nova regular',$sub-heading-size);
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            p {
+                @include body-text('Proxima Nova regular',$body-text-size);
+                @include block-border(1px,0,1px,0,$white-color,solid);
+                @include block-padding(20px 0 20px 0);
+                @include block-margin(15px 0 0 0);
+                text-align: justify;
+                position: relative;
+                &:before {
+                    content: '';
+                    width: 150px;
+                    height: 13px;
+                    background: $white-color;
+                    @include border-radius(20px);
+                    position: absolute;
+                    top: -7px;
+                    left:40%;
+                }
+            }
+        }
+        .banner-arrow {
+            width: 40px;
+            height: 18px;
+            position: absolute;
+            bottom: 40px;
+            background: url($banner-arrow-url) no-repeat center center;
+        }
+    }
+    .southindia-ber {
+        @include block-padding(20px 0);
+        .main-heading {
+            @include body-text('Proxima Nova thin',$main-heading-size);
+            color:$main-heading-color;
+            @include block-padding(0 0 2%);
+            
+        }
+        .content-block {
+            @include block-padding(0 5% 0 1%);
+            @include block-border(0,0,0,5px,$red-color,solid);
+            header {
+                @include body-text('Proxima Nova thin',$sub-heading-size);
+                color:$sub-heading-color;
+                @include text-transform(uppercase);
+            }
+            article {
+                @include body-text('Proxima Nova regular',$body-text-size);
+                color:$bodytext-color;
+                min-height: 95px;
+            }
+            footer {
+                a {
+                    @include body-text('Proxima Nova semibold',$more-link-size);
+                    color:$link-light-grey-color;
+                    background: url($know-more-arrow-url) no-repeat center right;
+                    @include background-position(100%, 0);
+                    @include transition(all 0.5s ease);
+                    @include block-padding(0 15px 0 0);
+                    @include text-decoration(none);
+                    &:hover {
+                        @include background-position(100%, -23px);
+                        color:$red-color;
+                    }
+                }
+            }
+        }
+    }
+    .sub-banner-home {
+        width: 100%;
+        background: url($subpage-banner-url) no-repeat center right;
+        @include block-margin(20px 0 20px 0);
+        @include block-padding(3% 0);
+        blockquote {
+            @include block-margin(auto);
+            @include block-border(1px,1px,1px,1px,$white-color,solid);
+            @include body-text('Proxima Nova thin',$main-heading-size);
+            color:$white-color;
+            max-width: 700px;
+            display: flex;
+            flex-direction: row;
+            @include text-transform(uppercase);
+            @include block-padding(2% 2% 2% 2%);
+            line-height: 1;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                @include block-border(10px,0px,0px,10px,$white-color,solid);
+                left: -6px;
+                top: -6px;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: 45px;
+                height: 45px;
+                @include block-border(0,5px,5px,0,$white-color,solid);
+                right: -3px;
+                bottom: -3px;
+            }
+            .left-quote {
+                background: url($left-quote-img-url) no-repeat center top;
+                @include block-padding(20px);
+            }
+            .right-quote {
+                background: url($right-quote-img-url) no-repeat center bottom;
+                @include block-padding(20px);
+            }
+        }
+    }
+    .event-news {
+        .main-heading {
+            @include block-padding(0);
+            @include text-transform(uppercase);
+        }
+        .event-news-main {
+            background: $event-news-bg-color;
+            @include block-padding(25px 0);
+            .content-block {
+                &:first-child {
+                    @include block-border(0,0,0,0,$red-color,solid);
+                }
+                aside {
+                    float: left;
+                    @include block-padding(0);
+                    img {
+                       max-width: 206px; 
+                    }
+                }
+                article {
+                    float: left;
+                    header {
+                        @include body-text('Proxima Nova regular',$sub-heading-size);
+                        color:$bodytext-color;
+                        @include text-transform(capitalize);
+                        line-height: 1.2;
+                        @include block-margin(0 0 10px 0);
+                        a {
+                            color:$bodytext-color;
+                            @include text-decoration(none);
+                            &:hover {
+                                color:$red-color;
+                            }
+                        }
+                    }
+                    p {
+                        @include body-text('Proxima Nova regular',$body-text-size);
+                        color:$bodytext-color;
+                    }
+                }
+                .row {
+                    @include block-margin(0);
+                }
+                footer {
+                    a {
+                       @include body-text('Proxima Nova semibold',$knowmore-link-size);
+                        color:$link-dark-grey-color; 
+                        
+                    }
+                }
+            }
+        }
+    }
+    .csr-activities {
+        @include block-padding(0 0 20px 0);
+        .main-heading {
+            @include block-padding(0 0 2%);
+            @include text-transform(uppercase);
+        }
+        .csr-activities-main {
+            > .row:first-child {
+                @include block-border(0,5px,0,5px,$red-color,solid);
+                .col {
+                    @include block-border(0,0,0,5px,$event-news-bg-color,solid);
+                    @include block-padding(10px 0);
+                    &:first-child {
+                        @include block-border(0,0,0,0,$event-news-bg-color,solid);
+                    }
+                    a {
+                        
+                        img {
+                            max-width: 300px;
+                        }
+                    }
+                    
+                }
+            }
+            .row {
+                &.text-right {
+                    @include block-margin(15px -20px);
+                }
+            }
+            footer {
+                @include block-padding(0 0 0 0);
+                a {
+                    @include body-text('Proxima Nova semibold',$knowmore-link-size);
+                    color:$link-dark-grey-color; 
+                    background: url($know-more-arrow-url) no-repeat center right;
+                    @include background-position(100%, 0);
+                    @include transition(all 0.5s ease);
+                    @include block-padding(0 15px 0 0);
+                    @include text-decoration(none);
+                    &:hover {
+                        @include background-position(100%, -23px);
+                        color:$red-color;
+                    }
+                }
+            }
+        }
+    }
+    .map-section {
+        .main-heading {
+            @include block-padding(0 0 2%);
+            @include text-transform(uppercase);
+            h2 {
+                  @include body-text('Proxima Nova scosf thin',$mainsub-heading-size);
+                  color:$link-dark-grey-color;   
+            }
+            
+        }
+    }
+}
