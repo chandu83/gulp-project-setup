@@ -21,6 +21,12 @@ main {
                     display: flex;
                     justify-content: center;
                 }
+                @media (max-width:767px) {
+                    font-size: $mainsub-heading-size;
+                    span {
+                        font-size: $more-link-size;
+                    }
+                }
             }
             p {
                 @include body-text('Proxima Nova regular',$body-text-size);
@@ -38,6 +44,9 @@ main {
                     position: absolute;
                     top: -7px;
                     left:40%;
+                    @media (max-width:767px) {
+                        left: 20%;
+                    }
                 }
             }
         }
@@ -47,10 +56,18 @@ main {
             position: absolute;
             bottom: 40px;
             background: url($banner-arrow-url) no-repeat center center;
+            @media (max-width:767px) {
+                bottom: 20px;
+            }
         }
     }
     .southindia-ber {
         @include block-padding(20px 0);
+        &.map-section {
+            @media (max-width:767px) {
+                @include block-padding(0);
+            }
+        }
         .main-heading {
             @include body-text('Proxima Nova thin',$main-heading-size);
             color:$main-heading-color;
@@ -104,6 +121,12 @@ main {
             @include block-padding(2% 2% 2% 2%);
             line-height: 1;
             position: relative;
+            
+            @media (max-width:767px) {
+                @include block-padding(10% 5% 10% 10%);
+                font-size: $more-link-size;
+            }
+            
             &:before {
                 content: "";
                 position: absolute;
@@ -143,12 +166,23 @@ main {
             .content-block {
                 &:first-child {
                     @include block-border(0,0,0,0,$red-color,solid);
+                    @media (max-width:767px) {
+                        @include block-border(0,0,5px,0,$red-color,solid);
+                        @include block-padding(0 15px 10px 0);
+                        @include block-margin(0 0 10px 0);
+                    }
                 }
                 aside {
                     float: left;
                     @include block-padding(0);
                     img {
                        max-width: 206px; 
+                        @media (max-width:768px) {
+                            width: 100%;
+                        }
+                    }
+                    @media (max-width:767px) {
+                        text-align: center;
                     }
                 }
                 article {
@@ -181,6 +215,12 @@ main {
                         color:$link-dark-grey-color; 
                         
                     }
+                    @media (max-width:767px) {
+                        text-align: right !important;
+                    }
+                }
+                @media (max-width:767px) {
+                    @include block-border(0,0,0,0,$red-color,solid);
                 }
             }
         }
@@ -197,6 +237,9 @@ main {
                 .col {
                     @include block-border(0,0,0,5px,$event-news-bg-color,solid);
                     @include block-padding(10px 0);
+                    @media (max-width:767px) {
+                        @include block-border(0,0,0,0,$event-news-bg-color,solid);
+                    }
                     &:first-child {
                         @include block-border(0,0,0,0,$event-news-bg-color,solid);
                     }
@@ -204,6 +247,9 @@ main {
                         
                         img {
                             max-width: 300px;
+                            @media (max-width:768px) {
+                                max-width: 200px;
+                            }
                         }
                     }
                     
@@ -239,8 +285,14 @@ main {
             h2 {
                   @include body-text('Proxima Nova scosf thin',$mainsub-heading-size);
                   color:$link-dark-grey-color;   
+                @media (max-width:767px) {
+                    font-size: $quick-link-head-size;
+                }
             }
-            
         }
+        img {
+                width: 100%;
+                height: 100%;
+            }
     }
 }

@@ -1,0 +1,303 @@
+.branches-section {
+    
+}
+.choose_slider {
+    width: 100%;
+}
+.btn_nav {
+    position: absolute;
+    top: 35%;
+    img {
+       @media (max-width:767px) {
+            width: 20px;
+        } 
+    }
+    @media (max-width:767px) {
+        top: 30%;
+    }
+    &.btn_prev {
+        left: 0;
+    }
+    &.btn_next {
+        right: 0;
+    }
+}
+.choose_slider_items {
+    position: relative;
+    min-height: 800px;
+    padding-left: 12%;
+    @media (max-width:768px) {
+        padding-left: 0;
+        min-height: 470px;
+    }
+    @media (max-width:767px) {
+        min-height: 270px;
+    }
+    ul {
+        top: 5%;
+        position: absolute;
+        @media (max-width:768px) {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    li {
+        position: relative;
+        list-style: none;
+        display: none;
+        text-align: center;
+
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    
+
+    &.previous_hidden {
+        display: block;
+        transform: scale(0.6,0.6);
+        -moz-transform: scale(0.6,0.6);
+        -ms-transform: scale(0.6,0.6);
+        -webkit-transform: scale(0.6,0.6);
+        opacity: 0.0;
+        position: absolute;
+        top: 40px;
+        left: -5px;
+        z-index: 0;
+    }
+
+    &.next_hidden {
+        display: block;
+        transform: scale(0.6,0.6);
+        -moz-transform: scale(0.6,0.6);
+        -ms-transform: scale(0.6,0.6);
+        -webkit-transform: scale(0.6,0.6);
+        opacity: 0.0;
+        position: absolute;
+        top: 40px;
+        left: 525px;
+        z-index: 0;
+        @media (max-width:768px) {
+            left: 225px;
+        }
+    }
+
+    &.previous_item {
+        display: block;
+        transform: scale(0.8,0.8);
+        -moz-transform: scale(0.8,0.8);
+        -ms-transform: scale(0.8,0.8);
+        -webkit-transform: scale(0.8,0.8);
+        opacity: 0.65;
+        position: absolute;
+        top: 40px;
+        /*left: 95px;*/
+        z-index: 0;
+        @media (max-width:768px) {
+                
+            top: 40px;
+            left: 155px;     
+                
+        }
+        @media (max-width:767px) {
+
+            left: 85px;    
+                
+        }
+        @media (max-width:360px) {
+
+            left: 65px;    
+                
+        }
+    }
+
+    &.next_item {
+        display: block;
+        transform: scale(0.8,0.8);
+        -moz-transform: scale(0.8,0.8);
+        -ms-transform: scale(0.8,0.8);
+        -webkit-transform: scale(0.8,0.8);
+        opacity: 0.65;
+        position: absolute;
+        top: 40px;
+        /*left: 431px;*/
+        left: 631px;
+        z-index: 0;
+        @media (max-width:768px) {
+                
+            left: 461px;     
+                
+        }
+        @media (max-width:767px) {
+
+            left: 251px;    
+                
+        }
+        @media (max-width:360px) {
+
+            left: 211px;    
+                
+        }
+    }
+
+
+    &.previous_item_2 {
+        display: block;
+        transform: scale(0.6,0.6);
+        -moz-transform: scale(0.6,0.6);
+        -ms-transform: scale(0.6,0.6);
+        -webkit-transform: scale(0.6,0.6);
+        opacity: 0.35;
+        position: absolute;
+        top: 40px;
+        /*left: -5px;*/
+        left: -125px;
+        z-index: 0;
+        @media (max-width:768px) {
+                
+            
+            left: 45px;     
+                
+        }
+        @media (max-width:767px) {
+
+            left: 25px;    
+                
+        }
+    }
+
+    &.next_item_2 {
+        display: block;
+        transform: scale(0.6,0.6);
+        -moz-transform: scale(0.6,0.6);
+        -ms-transform: scale(0.6,0.6);
+        -webkit-transform: scale(0.6,0.6);
+        opacity: 0.35;
+        position: absolute;
+        top: 40px;
+        /*left: 525px;*/
+        left: 800px;
+        z-index: 0;
+        @media (max-width:768px) {
+
+            left: 550px;    
+                
+        }
+        @media (max-width:767px) {
+
+            left: 310px;    
+                
+        }
+        @media (max-width:360px) {
+
+            left: 250px;    
+                
+        }
+    }
+
+
+    &.current_item {
+        display: block;
+        position: absolute;
+        transform: scale(1,1);
+        -moz-transform: scale(1,1);
+        -ms-transform: scale(1,1);
+        -webkit-transform: scale(1,1);
+        top: 0;
+        left: 262px;
+        z-index: 100;
+            a {
+                background: url($branches-active-img-url) no-repeat center right;
+                display: inline-block;
+                width: 346px;
+                height: 523px;
+                line-height: 323px;
+                @include body-text('Proxima Nova bold',$quick-link-head-size);
+                color:$red-color; 
+                @include text-transform(uppercase);
+                text-decoration: none;
+            }
+            .branch-address {
+                display: block;
+            }
+            @media (max-width:768px) {
+                left: 182px;
+                a {
+                   width: 146px;
+                    height: 223px;
+                    line-height: 123px; 
+                    background-size: 100% 100%;
+                    font-size: $body-text-size;
+                }
+                
+            }
+            @media (max-width:767px) {
+                a {
+                        width: 106px;
+                    height: 153px;
+                   line-height: 73px; 
+                    font-size: $branches-size;
+                }
+                    
+            }
+            @media (max-width:767px) {
+
+                left: 102px;    
+
+            }
+            @media (max-width:767px) {
+
+                    left: 72px;    
+
+            }
+        }
+        a {
+            background: url($branches-inactive-img-url) no-repeat center right;
+            display: inline-block;
+            width: 193px;
+            height: 309px;
+            line-height: 209px; 
+            @include body-text('Proxima Nova bold',$more-link-size);
+            color:$footer-bg-color; 
+            @include text-transform(uppercase);
+            text-decoration: none;
+            @media (max-width:768px) {
+                
+               
+                   width: 93px;
+                    height: 209px;
+                    line-height: 109px; 
+                    background-size: 100% 100%;
+                    font-size: $branches-size;
+               
+                
+            }
+            @media (max-width:767px) {
+                width: 43px;
+                height: 109px;
+                line-height: 59px;
+                font-size: $branches-mobile-size;
+            }
+        }
+        .branch-address {
+            display: none;
+            header {
+                @include body-text('Proxima Nova Thin',$quick-link-head-size);
+                color: $red-color;
+                @include text-transform(uppercase);
+                @media (max-width:767px) {
+                    font-size: $body-text-size;
+                }
+            }
+            footer {
+                @include body-text('Proxima Nova Thin',$knowmore-link-size);
+                color: $footer-bg-color;
+                @media (max-width:767px) {
+                    font-size: $body-text-size;
+                }
+            }
+        }
+    }
+}

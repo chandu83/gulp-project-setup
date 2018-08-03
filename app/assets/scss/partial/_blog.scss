@@ -1,0 +1,55 @@
+.blog-section {
+    @include body-text('Proxima Nova thin',$sub-heading-size);
+    color: $bodytext-color;
+    font-weight: 100;
+    header {
+        width: 100%;
+        overflow: hidden;
+        @include block-margin(0 0 20px 0);
+        h2 {
+            @include body-text('Proxima Nova thin',$mainsub-heading-size);
+            color:$red-color; 
+            font-weight: 100;
+            @include block-margin(0);
+            @include text-transform(uppercase);
+            
+            @media (max-width:768px) {
+               font-size: $sub-heading-size;
+            }
+        }
+        img {
+            float: left;
+            @include block-margin(0 15px 0 0);
+            @media (max-width:768px) {
+                width: 100%; 
+                @include block-margin(0 0 15px 0);
+            }
+        }
+    }
+    article {
+        p {
+            @include body-text('Proxima Nova thin',$sub-heading-size);
+            @media (max-width:768px) {
+                font-size: $body-text-size;
+            }
+        }
+    }
+    
+    footer {
+        @include block-padding(0 0 0 0);
+        a {
+            @include body-text('Proxima Nova semibold',$knowmore-link-size);
+            color:$link-dark-grey-color; 
+            background: url($know-more-arrow-url) no-repeat center right;
+            @include background-position(100%, 0);
+            @include transition(all 0.5s ease);
+            @include block-padding(0 15px 0 0);
+            @include text-decoration(none);
+            &:hover {
+                @include background-position(100%, -23px);
+                color:$red-color;
+            }
+        }
+    }
+}
+

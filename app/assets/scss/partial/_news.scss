@@ -1,0 +1,213 @@
+#news-scroll {
+   &.scrollbar {
+        float: left;
+        height: 545px;
+        @include block-margin(0 0 0 22px);
+        width: 100%;
+        overflow-y: scroll;
+        @media (max-width:767px) {
+           @include block-margin(0 0 0 0);
+        }
+        .force-overflow {
+            min-height: 450px;
+            @include block-padding(10px);
+            .row {
+                @include block-margin(0 0 25px);
+            }
+            section {
+                article {
+                    overflow: hidden;
+                    aside {
+                        float: left;
+                        @include block-margin(0 15px 0 0);
+                    }
+                    h4 {
+                        @include body-text('Proxima Nova thin',$quick-link-size);
+                        color:$red-color; 
+                        font-weight: 100;
+                        line-height: 1.5;
+                        @include text-transform(uppercase);
+                    }
+                    p {
+                        @include body-text('Proxima Nova thin',$knowmore-link-size);
+                        color:$bodytext-color; 
+                        font-weight: 100;
+                        @include block-margin(0);
+                    }
+                }
+                footer {
+                    overflow: hidden;
+                    a {
+                        float: right;
+                        @include body-text('Proxima Nova bold',$subscribe-btn-size);
+                        color:$link-dark-grey-color;
+                        @include text-decoration(none);
+                        position: relative;
+                        @include block-padding(0 15px 0 0);
+                        font-weight: bold;
+                        span {
+                            background: url($footer-link-img-url) no-repeat top left;
+                            @include background-position(0,0);
+                            width: 6px;
+                            height: 13px;
+                            display: inline-block;
+                            position: absolute;
+                            right: 0;
+                            top:3px;
+                            @include transition(all 0.5s ease);
+                        }
+                        &:hover {
+                            color:$red-color;
+                            span {
+                                @include background-position(0,-13px);
+                                top:2px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    &::-webkit-scrollbar {
+        width: 6px;
+        background-color: $red-color;
+    } 
+    &::-webkit-scrollbar-thumb {
+        background-color: $red-color;
+    }
+    &::-webkit-scrollbar-track {
+        
+        background-color: #f5f5f5;
+    }
+}
+.news {
+    h2 {
+        font-size: $main-heading-size;
+        @include text-transform(uppercase);
+        @include block-margin(15px 0 10px);
+    }
+}
+.news-left-main {
+    
+    @include block-border(0,1px,0,0,$link-light-grey-color,solid);
+    @media (max-width:767px) {
+        @include block-border(0,0,0,0,$link-light-grey-color,solid);
+        @include block-margin(0 0 25px 0);
+    }
+    .news-left-section {
+        @include body-text('Proxima Nova thin',$sub-heading-size);
+        color: $bodytext-color;
+        font-weight: 100;
+        
+        h2 {
+            @include body-text('Proxima Nova thin',$quick-link-head-size);
+            color:$red-color; 
+            font-weight: 100;
+            line-height: 1.5;
+            @include block-margin(10px 0 10px 0);
+            @include text-transform(uppercase);
+        }
+        img {
+            @media (max-width:768px) {
+                width: 100%;
+            }
+        }
+        footer {
+            @include block-padding(0 0 0 0);
+            a {
+                @include body-text('Proxima Nova semibold',$knowmore-link-size);
+                color:$link-dark-grey-color; 
+                background: url($know-more-arrow-url) no-repeat center right;
+                @include background-position(100%, 0);
+                @include transition(all 0.5s ease);
+                @include block-padding(0 15px 0 0);
+                @include text-decoration(none);
+                &:hover {
+                    @include background-position(100%, -23px);
+                    color:$red-color;
+                }
+            }
+        }
+    }
+}
+
+.carousel {
+    @include block-padding(0 50px 0 50px);
+    .carousel-control-next, .carousel-control-prev {
+        width: 5%;
+    }
+}
+.carousel-control-prev , .carousel-control-next {
+    i {
+        font-size: $main-heading-size;
+        color: $link-dark-grey-color;
+    }
+}
+@media (min-width: 768px) {
+
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item,
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item  {
+        display: block;
+    }
+    
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+
+}

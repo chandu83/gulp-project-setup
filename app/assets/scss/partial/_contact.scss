@@ -1,0 +1,96 @@
+.contact-section {
+    @include body-text('Proxima Nova thin',$sub-heading-size);
+    color: $bodytext-color;
+    font-weight: 100;
+    @include block-margin(0 0 20px 0);
+    header {
+        width: 100%;
+        overflow: hidden;
+        @include block-margin(0 0 20px 0);
+        text-align: center;
+        @include text-transform(uppercase);
+        color: $red-color;
+        font-size: $mainsub-heading-size;
+        h2 {
+            @include body-text('Proxima Nova thin',$mainsub-heading-size);
+            color:$red-color; 
+            font-weight: 100;
+            @include block-margin(0);
+            @include text-transform(uppercase);
+            
+            @media (max-width:768px) {
+               font-size: $sub-heading-size;
+            }
+        }
+        img {
+            float: left;
+            @include block-margin(0 15px 0 0);
+            width: 100%;
+            @media (max-width:768px) {
+                width: 100%; 
+                @include block-margin(0 0 15px 0);
+            }
+        }
+    }
+    article {
+        text-align: center;
+        @include body-text('Proxima Nova regular',$more-link-size);
+        p {
+            @include block-margin(35px 0 0 0);
+            b {
+                color: $red-color;
+            }
+            
+            @media (max-width:768px) {
+                font-size: $body-text-size;
+            }
+            a {
+                color: $bodytext-color;
+                &:hover {
+                    text-decoration: none;
+                    color: $red-color;
+                }
+            }
+        }
+    }
+    .form-control {
+        &.textbox {
+            @include border-radius(0);
+            @include block-border(2px,2px,2px,2px,$border-form-color,solid);
+            @include block-padding(15px);
+            height: auto !important;
+            box-shadow:0 0 0 0 rgba(0,123,255,.5) !important;
+        }
+    } 
+    .form-row {
+        @include block-padding(0 0 5px 0);
+        > .form-group {
+            @include block-padding(0 20px 0 0);
+        }
+    }
+    .btn-contact , .btn-contact:hover , .btn-contact:focus , .btn-contact:active {
+        @include border-radius(0);
+        @include block-border(0,0,0,0,$border-form-color,solid);
+        background: $red-color !important;
+        @include body-text('Proxima Nova thin',$sub-heading-size);
+        color: $white-color;
+        @include text-transform(uppercase);
+        @include block-padding(5px 20px);
+        box-shadow:0 0 0 0 rgba(0,123,255,.5) !important;
+    }
+    .btn-contact {
+        &:hover {
+            background: $event-news-bg-color !important;
+            color: $red-color;
+        }
+    }
+}
+main {
+    .sub-banner-home {
+        blockquote {
+            &.career-quote {
+                @include block-padding(2% 8% 2% 8%);
+            }
+        }
+    }
+}

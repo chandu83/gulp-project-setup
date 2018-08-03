@@ -4,6 +4,9 @@ $white-color:#ffffff;
 $red-color:#e30613;
 $footer-bg-color:#9d9d9c;
 $event-news-bg-color:#ececec;
+$founder-image-border-color:#626262;
+$product-icon-bg-color:#bdbfc1;
+$border-form-color:#dadada;
 
 //Heading Color Codes
 $main-heading-color:#575756;
@@ -29,10 +32,20 @@ $quick-link-size:1.125rem; //As per template 18px
 $more-link-size:1rem; //As per template 16px
 $knowmore-link-size:1.2rem; //As per template 20px
 $quick-link-head-size:1.875rem; //As per template 29px
+$branches-size:0.575rem;
+$branches-mobile-size:0.275rem;
 
 
 //Footer Font Sizes
 $footer-text-size:0.688rem; //As per template 11px
+
+//Vertical Tabs
+$padding-base: 15px;
+$color-body: #fff;
+$color-border: #ddd;
+$color-link: #0275d8;
+$border-radius: .25rem;
+
 
 //Images URL's
 $homepage-banner-url:"../images/banners1.jpg";
@@ -47,3 +60,5 @@ $right-quote-img-url:"../images/quote-right.png";
 $footer-link-img-url:"../images/footer-arrow.png";
 $store-locator-img-url:"../images/location-icon.png";
 $online-store-img-url:"../images/cart-icon.png";
+$branches-active-img-url:"../images/branches-active.png";
+$branches-inactive-img-url:"../images/branches-inactive.png";
