@@ -46,6 +46,14 @@ $color-border: #ddd;
 $color-link: #0275d8;
 $border-radius: .25rem;
 
+//Z Index Values
+$zindex-dropdown:          1000 !default;
+$zindex-sticky:            1020 !default;
+$zindex-fixed:             1030 !default;
+$zindex-modal-backdrop:    1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
 
 //Images URL's
 $homepage-banner-url:"../images/banners1.jpg";
